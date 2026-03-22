@@ -1,13 +1,14 @@
 from datetime import datetime
 
 from dotenv import load_dotenv
+load_dotenv()  # 加载环境变量
 from neo4j.exceptions import ServiceUnavailable
 
 from hello_agents.context import ContextBuilder, ContextConfig
 from hello_agents.core.message import Message
 from hello_agents.tools import MemoryTool, RAGTool
 
-load_dotenv()  # 加载环境变量
+
 
 # 1. 初始化工具
 try:
